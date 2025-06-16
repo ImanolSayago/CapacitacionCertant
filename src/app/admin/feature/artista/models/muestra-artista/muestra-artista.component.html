@@ -1,0 +1,28 @@
+<div class="artista-list-container">
+
+   <div class="txt-art">
+      <h2 class="section-title">Nuestros artistas</h2>
+      <a class="add-art-link" (click)="irCrearArtistas()">Agregar nuevos artistas</a>
+  </div>
+  
+  @if (listaArtistas && listaArtistas.length > 0) {
+    
+    <ul class="artista-list">
+      @for (item of listaArtistas; track $index) {
+
+        <li class="artista-item">
+          <div class="artista-info">
+            <span class="artista">{{ item.nombre }} - {{item.tipo}}</span>
+            </div>
+
+            <div class="artista-actions">
+        
+            <button (click)="onEliminarClick(item.id!)" class="delete-button">Eliminar</button>
+            </div>
+        </li>
+      }
+    </ul>
+  } @else {
+    <p class="no-artista-message">No hay canciones disponibles en este momento.</p>
+  }
+</div>

@@ -1,0 +1,51 @@
+nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: rgb(31, 100, 128);
+    border-bottom: 1px solid black;
+}
+
+.logo h2{
+    font-size: 2rem;
+    color: white;
+}
+
+main{
+    height: 100vh;
+    margin-bottom: 220px;
+}
+
+.lista ul{
+    list-style: none;
+ display: flex;
+ flex-direction: row;
+ align-items: center;
+}
+
+.lista ul li{
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.lista ul li a{
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: white;
+}
+
+footer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: rgb(31, 100, 128);
+    border-top: 1px solid black;
+    height: 150px;
+}
+
+footer h3{
+    color: white;
+}

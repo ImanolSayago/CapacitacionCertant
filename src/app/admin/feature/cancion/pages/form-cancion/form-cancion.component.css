@@ -1,0 +1,98 @@
+/* Estilos generales del contenedor del formulario */
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh; /* Ocupa la mayor parte de la altura de la ventana para centrar */
+  background-color: #f0f2f5; /* Un gris claro de fondo */
+  padding: 20px;
+}
+
+/* Estilo del formulario en sí */
+form {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra suave para efecto de elevación */
+  width: 100%;
+  max-width: 500px; /* Ancho máximo para que no se extienda demasiado */
+  box-sizing: border-box; /* Incluye padding y border en el ancho */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fuente moderna */
+}
+
+h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 30px;
+  font-size: 2em;
+  font-weight: 700;
+  border-bottom: 2px solid #007bff; /* Línea decorativa */
+  padding-bottom: 10px;
+  display: inline-block; /* Para que la línea se ajuste al texto */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Estilo para cada grupo de label e input/select */
+.form-group {
+  margin-bottom: 25px; /* Más espacio entre grupos */
+}
+
+.form-group label {
+  display: block; /* Cada label en su propia línea */
+  margin-bottom: 8px;
+  color: #555;
+  font-weight: 600; /* Texto de etiqueta un poco más fuerte */
+  font-size: 0.95em;
+}
+
+.form-group input[type="text"],
+.form-group select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1em;
+  color: #333;
+  box-sizing: border-box; /* Asegura que el padding no aumente el ancho total */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Transición suave al enfocar */
+}
+
+.form-group input[type="text"]:focus,
+.form-group select:focus {
+  border-color: #007bff; /* Color azul al enfocar */
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); /* Sombra de enfoque */
+  outline: none; /* Elimina el contorno por defecto del navegador */
+}
+
+/* Estilo para mensajes de error */
+.error-message {
+  color: #dc3545; /* Rojo para errores */
+  font-size: 0.85em;
+  margin-top: 5px;
+}
+
+/* Estilo del botón de submit */
+.submit-button {
+  display: block; /* Ocupa todo el ancho */
+  width: 100%;
+  padding: 15px;
+  background-color: #28a745; /* Verde para la acción principal */
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.1em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Transiciones suaves */
+}
+
+.submit-button:hover {
+  background-color: #218838; /* Verde más oscuro al pasar el ratón */
+  transform: translateY(-2px); /* Pequeño efecto "pop" */
+}
+
+.submit-button:active {
+  background-color: #1e7e34; /* Aún más oscuro al clickear */
+  transform: translateY(0);
+}

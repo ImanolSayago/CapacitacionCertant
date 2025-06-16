@@ -1,0 +1,10 @@
+.muestra-discos{
+    height: 100vh;
+    margin-top: 50px;
+}
+
+.muestra-discos h1{
+    margin-bottom: 15px;
+    text-align: center;
+    font-size: 3rem;
+}

@@ -1,0 +1,46 @@
+
+.txt-carta h1 {
+  margin: 0;
+  font-size: 2rem;
+  color: #333;
+}
+
+.txt-carta p {
+  font-size: 1.2rem;
+  color: #666;
+  margin-top: 8px;
+}
+
+.canciones h3 {
+  margin-bottom: 12px;
+  font-size: 1.4rem;
+  color: #444;
+}
+
+.canciones ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.canciones li {
+  margin-bottom: 10px;
+  padding: 10px;
+  border-left: 4px solid #007acc;
+  background-color: #f8f8f8;
+  transition: background-color 0.3s;
+}
+
+.canciones li:hover {
+  background-color: #e0f0ff;
+}
+
+.canciones a {
+  text-decoration: none;
+  color: #007acc;
+  font-weight: 500;
+}
+
+.canciones a:hover {
+  text-decoration: underline;
+}

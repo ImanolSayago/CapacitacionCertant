@@ -1,0 +1,41 @@
+<div class="form-container">
+  <form [formGroup]="formulario" (ngSubmit)="enviarFormulario()">
+    <h2>Agregar Nueva Canción</h2>
+
+    <div class="form-group">
+      <label for="titulo">Ingrese el título:</label>
+      <input type="text" id="titulo" formControlName="titulo" placeholder="Ej: Bohemian Rhapsody">
+      @if (formulario.get('titulo')?.invalid && (formulario.get('titulo')?.dirty || formulario.get('titulo')?.touched)) {
+        <div class="error-message">El título es requerido.</div>
+      }
+    </div>
+
+    <div class="form-group">
+      <label for="idDisco">Seleccione el Disco:</label>
+      <select id="idDisco" formControlName="idDisco" required>
+        <option [value]="0" disabled selected>-- Selecciona un disco --</option>
+        @for (item of listaDiscos; track item.id) {
+          <option [value]="item.id">{{ item.titulo }}</option>
+        }
+      </select>
+      @if (formulario.get('idDisco')?.invalid && (formulario.get('idDisco')?.dirty || formulario.get('idDisco')?.touched)) {
+        <div class="error-message">El disco es requerido.</div>
+      }
+    </div>
+
+    <div class="form-group">
+      <label for="idArtista">Seleccione el Artista:</label>
+      <select id="idArtista" formControlName="idArtista" required>
+        <option [value]="0" disabled selected>-- Selecciona un artista --</option>
+        @for (item of listaArtistas; track item.id) {
+          <option [value]="item.id">{{ item.nombre }}</option>
+        }
+      </select>
+      @if (formulario.get('idArtista')?.invalid && (formulario.get('idArtista')?.dirty || formulario.get('idArtista')?.touched)) {
+        <div class="error-message">El artista es requerido.</div>
+      }
+    </div>
+
+    <button type="submit" class="submit-button">Crear Canción</button>
+  </form>
+</div>

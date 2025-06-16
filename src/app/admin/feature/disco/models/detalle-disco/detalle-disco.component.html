@@ -1,0 +1,21 @@
+  <div class="txt-carta">
+             <h1>{{ disc.titulo }}</h1>
+            <p>Artista: {{ disc.artista.nombre }}</p>
+        </div>
+       
+
+        <div class="canciones">
+             <h3>Canciones</h3>
+
+            @if (disc.canciones && disc.canciones.length > 0) {
+            <ul>
+            @for (cancion of disc.canciones; track cancion.id) { <li>
+                <a href="">
+                {{ cancion.titulo }}
+                </a></li>
+                }
+            </ul>
+    } @else {
+        <p>Este disco no tiene canciones listadas.</p>
+    }
+        </div>

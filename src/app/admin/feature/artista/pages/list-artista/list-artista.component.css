@@ -1,0 +1,23 @@
+.add-button {
+    margin: 20px;
+  display: inline-block; /* Permite aplicar padding y márgenes como un bloque */
+  font-size: 1.1rem; /* Un poco más pequeño y más legible */
+  text-decoration: none; /* Quitar el subrayado por defecto del enlace */
+  cursor: pointer;
+  border: 1px solid #0056b3; /* Un borde azul oscuro */
+  padding: 12px 25px; /* Un poco más de padding para que se vea más grande */
+  background-color: #007bff; /* Azul vibrante */
+  color: white; /* Texto blanco */
+  border-radius: 8px; /* Bordes ligeramente más redondeados */
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease; /* Transiciones suaves */
+  font-weight: 600; /* Texto más fuerte */
+  letter-spacing: 0.5px; /* Espaciado entre letras para mejor lectura */
+}
+
+
+
+.add-button:hover {
+  background-color: #0056b3; /* Azul más oscuro al pasar el ratón */
+  transform: translateY(-2px); /* Efecto de elevación sutil */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra al pasar el ratón */
+}

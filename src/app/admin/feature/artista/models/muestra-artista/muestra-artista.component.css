@@ -1,0 +1,127 @@
+
+.artista-list-container {
+  padding: 30px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); 
+  max-width: 700px; 
+  margin: 40px auto; 
+  font-family: 'Arial', sans-serif; 
+  color: #333;
+}
+
+.artista-list-container h2 {
+  text-align: left;
+  color: #2c3e50;
+  margin-bottom: 0;
+  font-size: 2.2em;
+  font-weight: 700;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 10px;
+  margin: 0; 
+}
+
+
+
+
+.artista-list {
+  list-style: none; 
+  padding: 0;
+  margin: 0;
+}
+
+
+.artista-item {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  margin-bottom: 15px; 
+  padding: 15px 20px;
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  transition: transform 0.2s ease, box-shadow 0.2s ease; 
+}
+
+
+.artista-item:hover {
+  transform: translateY(-3px); 
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12); 
+  border-color: #3498db; 
+}
+
+
+.artista-title {
+  font-size: 1.3em;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+
+.no-artista-message {
+  text-align: center;
+  font-size: 1.1em;
+  color: #666;
+  padding: 20px;
+  border: 1px dashed #ccc;
+  border-radius: 5px;
+  background-color: #f0f0f0;
+}
+
+.artista-item {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  margin-bottom: 15px;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.artista-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+  border-color: #3498db;
+}
+
+
+.artista-info {
+  flex-grow: 1; 
+}
+
+.delete-button {
+  background-color: #cc2e2e; 
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 15px;
+  font-size: 0.9em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+
+
+.txt-art {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.add-art-link
+{
+  border: 1px solid gray;
+  padding: 5px 10px;
+  border-radius: 4px;
+transition: transform 0.2s ease;
+}
+
+.add-art-link:hover{
+  transform: translateY(-5px);
+}

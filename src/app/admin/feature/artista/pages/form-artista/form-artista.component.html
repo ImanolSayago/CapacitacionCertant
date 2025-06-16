@@ -1,0 +1,24 @@
+<div class="form-container">
+  <form [formGroup]="formulario" (ngSubmit)="enviarFormulario()">
+    <h2>Agregar Nuevo Artista</h2> <div class="form-group">
+      <label for="nombreArtista">Ingrese el nombre del artista:</label>
+      <input type="text" id="nombreArtista" formControlName="nombre" placeholder="Ej: Imanol Sayago">
+      @if (formulario.get('nombre')?.invalid && (formulario.get('nombre')?.dirty || formulario.get('nombre')?.touched)) {
+        <div class="error-message">El nombre del artista es requerido.</div>
+      }
+    </div>
+
+    <div class="form-group">
+      <label for="tipo">Ingrese el tipo de artista:</label>
+      <select id="tipo" formControlName="tipo" required>
+        <option [value]="''" disabled selected>-- Seleccione un tipo --</option> 
+        <option [value]="'Solista'">Solista</option> 
+        <option [value]="'Banda'">Banda</option>
+        </select>
+      @if (formulario.get('tipo')?.invalid && (formulario.get('tipo')?.dirty || formulario.get('tipo')?.touched)) {
+        <div class="error-message">El tipo de artista es requerido.</div>
+      }
+    </div>
+
+    <button type="submit" class="submit-button">Crear Artista</button> </form>
+</div>

@@ -1,0 +1,50 @@
+<div class="form-container">
+  <form [formGroup]="formulario" (ngSubmit)="enviarFormulario()">
+
+    <h2>Crear Nuevo Disco</h2>
+
+    <div class="form-group">
+      <label for="titulo">Título del Disco:</label>
+      <input type="text" id="titulo" formControlName="titulo" placeholder="Ej: Abismo de pasión">
+      @if (formulario.get('titulo')?.invalid && (formulario.get('titulo')?.dirty || formulario.get('titulo')?.touched)) {
+        <div class="error-message">Título es requerido.</div>
+      }
+    </div>
+
+    <div class="form-group">
+      <label for="anoCreacion">Año de Creación:</label>
+      <input type="text" id="anoCreacion" formControlName="anoCreacion" placeholder="Ej: 2023">
+      @if (formulario.get('anoCreacion')?.invalid && (formulario.get('anoCreacion')?.dirty || formulario.get('anoCreacion')?.touched)) {
+        <div class="error-message">Año de creación es requerido y debe ser de 4 dígitos.</div>
+      }
+    </div>
+
+    <div class="form-group">
+      <label for="artista">Artista:</label>
+      <select id="artista" formControlName="artista" required>
+        <option [value]="" disabled selected>-- Selecciona un artista --</option>
+        @for (item of listaArtistas; track item.id) {
+          <option [value]="item.id">{{item.nombre}}</option>
+        }
+      </select>
+      @if (formulario.get('artista')?.invalid && (formulario.get('artista')?.dirty || formulario.get('artista')?.touched)) {
+        <div class="error-message">Artista es requerido.</div>
+      }
+    </div>
+
+    <div class="form-group">
+      <label for="canciones">Canción(es):</label>
+     <select id="canciones" formControlName="canciones" multiple>
+    @for (item of listaCancionesDisponibles; track item.id) {
+    <option [value]="item.id">{{ item.titulo }}</option>
+    }
+    </select>
+      @if (formulario.get('canciones')?.invalid && (formulario.get('canciones')?.dirty || formulario.get('canciones')?.touched)) {
+        <div class="error-message">Debes seleccionar al menos una canción.</div>
+      }
+    </div>
+
+    <button type="submit" class="submit-button">Crear Disco</button>
+
+  </form>
+</div>
