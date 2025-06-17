@@ -1,19 +1,28 @@
+<div class="login-container">
 
-<form [formGroup]="formulario" (ngSubmit)="loginAndLogout()">
+  <div class="login-izquierda-panel">
+    <h2>¡La música te espera!</h2>
+    <p>Inicia sesión y descubre un universo de sonidos.</p>
+  </div>
 
-    <div class="form-group">
-        <label for="usuario">Ingrese su usuario</label>
-        <input formControlName="usuario" type="text" name="" id="usuario" placeholder="Ingrese su usuario">
-    </div>
+
+  <div class="login-derecha-panel">
+    <form [formGroup]="formulario" (ngSubmit)="loginAndLogout()">
+      <div class="form-group">
+        <label for="usuario">Usuario</label>
+        <input formControlName="usuario" type="text" id="usuario" placeholder="Ingresa tu usuario">
+      </div>
 
       <div class="form-group">
-        <label for="">Ingrese su contraseña</label>
-        <input formControlName="password" type="text" name="" id="password" placeholder="Ingrese la contraseña">
-    </div>
+        <label for="password">Contraseña</label>
+        <input formControlName="password" type="password" id="password" placeholder="Ingresa tu contraseña">
+      </div>
 
-    <div class="form-registrer">
-        <a (click)="irRegistro()">¿No tenes usuario? registrate ahora</a>
-    </div>
+      <button type="submit" class="btn-login">Iniciar Sesión</button>
 
-    <button class="btn-login">Iniciar sesion</button>
-</form>
+      <div class="form-register">
+        <p>¿No tienes una cuenta? <a (click)="irRegistro()">Regístrate ahora</a></p>
+      </div>
+    </form>
+  </div>
+</div>

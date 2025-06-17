@@ -2,6 +2,7 @@ import { Component, inject } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { AdminService } from '../../admin/core/services/admin.service';
 import { user } from '../../interfaces/user';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -14,7 +15,7 @@ export class RegisterComponent{
 
   service = inject(AdminService);
   fb = inject(FormBuilder);
-
+  rutas = inject(Router);
   listaUsuarios:user[] = [];
 
 
@@ -66,9 +67,10 @@ export class RegisterComponent{
         }
       }
     )
+  }
 
- 
-
-  
+  irLogin()
+  {
+    this.rutas.navigate(["login"])
   }
 }

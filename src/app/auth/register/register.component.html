@@ -1,15 +1,30 @@
-<form [formGroup]="formulario" (ngSubmit)="cargarUsuario()">
-    <h2 class="titulo-registrer">Formulario de registro</h2>
+<div class="register-page-container">
 
-    <div class="form-group">
-        <label for="usuario">Ingresa el nombre de usuario</label>
-        <input formControlName="usuario" id="usuario" type="text" placeholder="Ej:Pepe123">
-    </div>
+  <div class="registro-izquierda-panel">
+    <form [formGroup]="formulario" (ngSubmit)="cargarUsuario()">
+      <h2 class="titulo-register">Formulario de registro</h2>
 
-     <div class="form-group">
-        <label for="password">Ingresa la contraseña del usuario</label>
-        <input formControlName="password" id="password" type="text" placeholder="Ej:micontaseñasegura123">
-    </div>
+      <div class="form-group">
+        <label for="usuario">Nombre de usuario</label>
+        <input formControlName="usuario" id="usuario" type="text" placeholder="Ej: Pepe123">
+      </div>
 
-    <button class="btn-registrer">Registrarse</button>
-</form>
+      <div class="form-group">
+        <label for="password">Contraseña</label>
+        <input formControlName="password" id="password" type="password" placeholder="Ej: micontraseñasegura123">
+      </div>
+
+      <button type="submit" class="btn-register">Registrarse</button>
+
+      <div class="form-login-link">
+        <p>¿Ya tienes una cuenta? <a (click)="irLogin()">Inicia sesión aquí</a></p>
+      </div>
+    </form>
+  </div>
+
+  <div class="registro-derecha-panel">
+    <h2>No te puedes perder ningún disco</h2>
+    <p>Regístrate y accede a todos los beneficios</p>
+  </div>
+
+</div>

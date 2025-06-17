@@ -46,21 +46,6 @@ nav {
 
 main{
  flex-grow: 1;
- margin-bottom: 305px;
-}
-
-footer{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-evenly;
-    background-color: rgb(31, 100, 128);
-    border-top: 1px solid black;
-    height: 150px;
-}
-
-footer h3{
-    color: white;
 }
 
 /* ---- RESPONSIVE ---- */
