@@ -32,6 +32,11 @@ export class MainLayoutComponent {
     this.rutas.navigate(["main-admin/listaArtista"])
   }
 
+  ir()
+  {
+     this.rutas.navigate(["main-admin"])
+  }
+
   logout()
   {
     this.service.logOut();

@@ -12,75 +12,48 @@ import { ListDiscosComponent } from './public/feature/disco/pages/list-discos/li
 import { ListCancionesPublicComponent } from './public/feature/cancion/pages/list-canciones-public/list-canciones-public.component';
 import { ListaArtistasComponent } from './public/feature/artista/pages/lista-artistas/lista-artistas.component';
 import { LoginComponent } from './auth/login/login.component';
+import { authGuardFn } from './auth/guard/Auth-guard-fn';
 
 
 export const routes: Routes = [
 
+  {
+    path: "login",
+    component: LoginComponent
+  },
 
-    {
-        path:"login",
-        component:LoginComponent
-    },
-    
-    {
-   
-    
-        //RUTAS ADMINISTRADOR//
-        path: 'main-admin', 
-        component: MainLayoutComponent,
-      
-        children: [
-            {
-                path: '', 
-                redirectTo: 'discos', 
-                pathMatch: 'full'     
-            },
-            {
-                path: 'discos', 
-                component: ListDiscoComponent
-            },
-            {
-                path: 'discos/:id', 
-                component: DiscoInformacionComponent
-            },
-            {
-                path:"agregarDiscos",
-                component:FormDiscoComponent
-            },
-            {
-                path:"canciones",
-                component: ListCancionesComponent
-            },
+  {
+    path: "main-admin",
+    component: MainLayoutComponent,
+    canActivate: [authGuardFn],
+    children: [
+      { path: '', redirectTo: 'discos', pathMatch: 'full' },
+      { path: 'discos', component: ListDiscoComponent },
+      { path: 'discos/:id', component: DiscoInformacionComponent },
+      { path: 'agregarDiscos', component: FormDiscoComponent },
+      { path: 'canciones', component: ListCancionesComponent },
+      { path: 'crearCanciones', component: FormCancionComponent },
+      { path: 'listaArtista', component: ListArtistaComponent },
+      { path: 'crearArtista', component: FormArtistaComponent },
+    ]
+  },
 
-             {
-                path:"crearCanciones",
-                component: FormCancionComponent
-            },
+  {
+    path: '',
+    component: MainPublicComponent,
+     canActivate: [authGuardFn],
+    children: [
+      { path: '', redirectTo: 'discos-public', pathMatch: 'full' },
+      { path: 'inicio', component: MainPublicComponent },
+      { path: 'discos-public', component: ListDiscosComponent },
+      { path: 'discos/:id', component: DiscoInformacionComponent },
+      { path: 'canciones-public', component: ListCancionesPublicComponent },
+      { path: 'artistas-public', component: ListaArtistasComponent },
+    ]
+  },
 
-            {
-                path:"listaArtista",
-                component: ListArtistaComponent
-            },
-            {
-                path:"crearArtista",
-                component:FormArtistaComponent
-            }
-        ]
-    },
-
-    //RUTAS USUARIO 
-    {
-  path: '',
-  component: MainPublicComponent, 
-  children: [
-    { path: '', redirectTo: 'discos-public', pathMatch: 'full' },
-    { path: 'inicio', component: MainPublicComponent },
-    { path: 'discos-public', component: ListDiscosComponent },
-    { path: 'discos/:id', component: DiscoInformacionComponent },
-    { path: 'canciones-public', component: ListCancionesPublicComponent },
-    { path: 'artistas-public', component: ListaArtistasComponent },
-
-    { path: '**', redirectTo: 'discos-public' }
-  ]
-}
+  {
+    path: '**',
+    redirectTo: 'login'
+  }
 ];

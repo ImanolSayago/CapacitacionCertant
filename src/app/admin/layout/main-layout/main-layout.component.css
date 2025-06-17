@@ -9,9 +9,10 @@ nav {
   position: relative;
 }
 
-.logo h2 {
+.logo a {
   font-size: 2rem;
   color: white;
+  font-weight: 800;
 }
 
 
