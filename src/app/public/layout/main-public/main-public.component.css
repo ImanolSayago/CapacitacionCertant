@@ -15,7 +15,7 @@ nav {
   font-weight: 800;
 }
 
-/* Botón hamburguesa oculto por defecto */
+
 .hamburguesa {
   font-size: 2rem;
   color: white;
@@ -23,7 +23,7 @@ nav {
   display: none;
 }
 
-/* Lista de navegación */
+
 .lista ul {
   list-style: none;
   display: flex;

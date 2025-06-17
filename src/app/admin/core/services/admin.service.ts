@@ -40,6 +40,12 @@ export class AdminService {
     return this.http.delete<void>(url);
   }
 
+  editDisco(id:number,disco:DiscoDTO):Observable<DiscoDTO>
+  {
+    const url = `${this.api}/api/disco/edit/${id}`;
+    return this.http.put<DiscoDTO>(url,disco);
+  }
+
 
 
   //servicios para artista//
@@ -117,4 +123,17 @@ export class AdminService {
   getIsLoggedIn():boolean{
     return this.isLogin;
   }
+
+  addUser(user:user):Observable<user>
+{
+  const url = `${this.api}/api/usuario/crear`;
+
+  return this.http.post<user>(url,user);
+}
+
+getUsuarios():Observable<user[]>
+{
+  const url = `${this.api}/api/usuario/traer`
+  return this.http.get<user[]>(url);
+}
 }

@@ -39,9 +39,7 @@
     <option [value]="item.id">{{ item.titulo }}</option>
     }
     </select>
-      @if (formulario.get('canciones')?.invalid && (formulario.get('canciones')?.dirty || formulario.get('canciones')?.touched)) {
-        <div class="error-message">Debes seleccionar al menos una canción.</div>
-      }
+     
     </div>
 
     <button type="submit" class="submit-button">Crear Disco</button>

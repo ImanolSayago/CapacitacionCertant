@@ -6,6 +6,12 @@ form {
   border-radius: 10px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
+.titulo-registrer{
+    color: #4b5558;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 10px;
+}
 
 .form-group {
   margin-bottom: 1.5rem;
@@ -40,7 +46,7 @@ input:focus {
   border-color: #1f6480;
 }
 
-.btn-login {
+.btn-registrer {
   width: 100%;
   padding: 0.8rem;
   font-size: 1.1rem;
@@ -52,6 +58,6 @@ input:focus {
   transition: background-color 0.3s ease;
 }
 
-.btn-login:hover {
+.btn-registrer:hover {
   background-color: #15546a;
 }

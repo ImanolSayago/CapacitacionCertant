@@ -13,6 +13,8 @@ import { ListCancionesPublicComponent } from './public/feature/cancion/pages/lis
 import { ListaArtistasComponent } from './public/feature/artista/pages/lista-artistas/lista-artistas.component';
 import { LoginComponent } from './auth/login/login.component';
 import { authGuardFn } from './auth/guard/Auth-guard-fn';
+import { RegisterComponent } from './auth/register/register.component';
+import { EditFormDiscoComponent } from './admin/feature/disco/pages/edit-form-disco/edit-form-disco.component';
 
 
 export const routes: Routes = [
@@ -26,6 +28,10 @@ export const routes: Routes = [
   {
     path: "login",
     component: LoginComponent
+  },
+  {
+    path:"registro",
+    component:RegisterComponent
   },
 
   {
@@ -41,6 +47,7 @@ export const routes: Routes = [
       { path: 'crearCanciones', component: FormCancionComponent },
       { path: 'listaArtista', component: ListArtistaComponent },
       { path: 'crearArtista', component: FormArtistaComponent },
+      {path:"edit-disco/:id", component:EditFormDiscoComponent},
     ]
   },
 

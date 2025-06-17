@@ -1,0 +1,21 @@
+<div class="form-container">
+
+<form [formGroup]="formulario" (ngSubmit)="enviarEdit()">
+
+    <h2>Editando {{disco.titulo}}</h2>
+
+    <div class="form-group">
+        <label for="titulo">Ingrese el nuevo titulo</label>
+        <input formControlName="titulo" id="titulo" type="text">
+    </div>
+
+    <div class="form-group">
+        <label for="anoCreacion">Ingrese el nuevo año de creacion</label>
+        <input formControlName="anoCreacion" id="anoCreacion"  type="text">
+    </div>
+
+    <button class="submit-button">Editar informacion</button>
+
+</form>
+
+</div>

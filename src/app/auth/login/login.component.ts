@@ -31,6 +31,11 @@ export class LoginComponent {
     tipo:""
   }
 
+  irRegistro()
+  {
+    this.rutas.navigate(["registro"]);
+  }
+
   loginAndLogout()
   {
     if(this.formulario.valid)

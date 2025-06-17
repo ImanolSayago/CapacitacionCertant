@@ -32,4 +32,9 @@ export class VistaDiscoComponent {
   {
     this.eliminarDiscoEvent.emit(idDisco);
   }
+
+  irEdit(id:number)
+  {
+    this.rutas.navigate([`main-admin/edit-disco/${id}`]);
+  }
 }

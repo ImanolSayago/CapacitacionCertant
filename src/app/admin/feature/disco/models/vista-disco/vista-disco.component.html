@@ -13,6 +13,10 @@
 
       <div class="cont-ir">
 
+        @if (isAdmin== true) {
+           <a class="btn-edit" (click)="irEdit(disco.id!)">Editar</a>
+        }
+
         @if (isAdmin == true) {
           <a class="btn-ir" (click)="irDiscoAdmin(disco.id!)">Ver disco</a>
         }

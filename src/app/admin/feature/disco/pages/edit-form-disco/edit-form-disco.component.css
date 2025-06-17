@@ -1,0 +1,89 @@
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh; 
+  background-color: #f0f2f5; 
+  padding: 20px;
+}
+
+
+form {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px; 
+  box-sizing: border-box; 
+}
+
+h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 30px;
+  font-size: 1.8em;
+  font-weight: 600;
+}
+
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block; 
+  margin-bottom: 8px;
+  color: #555;
+  font-weight: bold;
+  font-size: 0.95em;
+}
+
+.form-group input[type="text"],
+.form-group select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1em;
+  color: #333;
+  box-sizing: border-box; 
+  transition: border-color 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.form-group input[type="text"]:focus,
+.form-group select:focus {
+  border-color: #007bff; 
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  outline: none; 
+}
+
+
+.form-group select.multi-select {
+  min-height: 120px; 
+  resize: vertical; 
+}
+
+.submit-button {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  background-color: #28a745; 
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.1em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease; 
+}
+
+.submit-button:hover {
+  background-color: #218838; 
+  transform: translateY(-2px); 
+}
+
+.submit-button:active {
+  background-color: #1e7e34; 
+  transform: translateY(0);
+}
