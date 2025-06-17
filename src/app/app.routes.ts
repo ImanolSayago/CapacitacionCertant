@@ -11,11 +11,20 @@ import { MainPublicComponent } from './public/layout/main-public/main-public.com
 import { ListDiscosComponent } from './public/feature/disco/pages/list-discos/list-discos.component';
 import { ListCancionesPublicComponent } from './public/feature/cancion/pages/list-canciones-public/list-canciones-public.component';
 import { ListaArtistasComponent } from './public/feature/artista/pages/lista-artistas/lista-artistas.component';
+import { LoginComponent } from './auth/login/login.component';
 
 
 export const routes: Routes = [
- {
 
+
+    {
+        path:"login",
+        component:LoginComponent
+    },
+    
+    {
+   
+    
         //RUTAS ADMINISTRADOR//
         path: 'main-admin', 
         component: MainLayoutComponent,

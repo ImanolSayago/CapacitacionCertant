@@ -1,0 +1,15 @@
+
+<form [formGroup]="formulario" (ngSubmit)="loginAndLogout()">
+
+    <div class="form-group">
+        <label for="usuario">Ingrese su usuario</label>
+        <input formControlName="usuario" type="text" name="" id="usuario" placeholder="Ingrese su usuario">
+    </div>
+
+      <div class="form-group">
+        <label for="">Ingrese su contraseña</label>
+        <input formControlName="password" type="text" name="" id="password" placeholder="Ingrese la contraseña">
+    </div>
+
+    <button class="btn-login">Iniciar sesion</button>
+</form>

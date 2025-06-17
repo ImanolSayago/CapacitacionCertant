@@ -1,10 +1,11 @@
 import { HttpClient } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
-import { Observable, ObservableLike } from 'rxjs';
+import { Observable, ObservableLike, tap } from 'rxjs';
 import { disco, DiscoDTO } from '../Interfaces/disco';
 import { discardPeriodicTasks } from '@angular/core/testing';
 import { artista } from '../Interfaces/artista';
 import { cancion, cancionDTO } from '../Interfaces/cancion';
+import { user } from '../../../interfaces/user';
 
 @Injectable({
   providedIn: 'root'
@@ -13,7 +14,7 @@ export class AdminService {
 
   private api = "http://localhost:8080";
   private http = inject(HttpClient);
-  
+  isLogin:boolean = false;
 
   //servicios para discos//
   getDiscos():Observable<disco[]>
@@ -93,5 +94,28 @@ export class AdminService {
   {
     const url = `${this.api}/api/cancion/borrar/${id}`;
     return this.http.delete<void>(url);
+  }
+
+
+  //logIn//
+
+  LogIn(credenciales: user): Observable<user> {
+  const url = `${this.api}/api/usuario/login`; 
+
+  return this.http.post<user>(url, credenciales).pipe(
+    tap(usuario => {
+      this.isLogin = true;
+    })
+  );
+}
+
+  logOut()
+  {
+    this.isLogin = false;
+    localStorage.removeItem("token")
+  }
+
+  getIsLoggedIn():boolean{
+    return this.isLogin;
   }
 }

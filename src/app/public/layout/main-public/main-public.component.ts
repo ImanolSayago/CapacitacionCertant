@@ -1,6 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { Router, RouterOutlet } from '@angular/router';
 import { FooterComponent } from "../../core/footer/footer.component";
+import { AdminService } from '../../../admin/core/services/admin.service';
 
 @Component({
   selector: 'app-main-public',
@@ -12,6 +13,7 @@ import { FooterComponent } from "../../core/footer/footer.component";
 export class MainPublicComponent {
 rutas = inject(Router);
 menuAbierto: boolean = false;
+service = inject(AdminService)
 
 irDiscos()
 {
@@ -27,4 +29,10 @@ irArtistas()
 {
   this.rutas.navigate(["artistas-public"])
 }
+
+ logout()
+  {
+    this.service.logOut();
+    this.rutas.navigate(["login"])
+  }
 }

@@ -1,6 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { Router, RouterOutlet } from '@angular/router';
 import { FooterComponent } from "../../../public/core/footer/footer.component";
+import { AdminService } from '../../core/services/admin.service';
 
 @Component({
   selector: 'app-main-layout',
@@ -13,6 +14,8 @@ export class MainLayoutComponent {
 
   rutas = inject(Router);
   menuAbierto: boolean = false;
+
+  service = inject(AdminService)
 
   irFormDiscos()
   {
@@ -29,4 +32,9 @@ export class MainLayoutComponent {
     this.rutas.navigate(["main-admin/listaArtista"])
   }
 
+  logout()
+  {
+    this.service.logOut();
+    this.rutas.navigate(["login"])
+  }
 }
