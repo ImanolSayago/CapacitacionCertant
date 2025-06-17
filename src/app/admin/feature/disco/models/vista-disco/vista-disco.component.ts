@@ -20,7 +20,7 @@ export class VistaDiscoComponent {
 
   irDisco(id:number)
   {
-    this.rutas.navigate([`discos/${id}`])
+    this.rutas.navigate([`main-admin/discos-admin/${id}`])
   }
 
   onClickEliminar(idDisco:number)

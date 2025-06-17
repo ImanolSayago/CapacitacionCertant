@@ -2,7 +2,6 @@ import { HttpClient } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
 import { Observable, ObservableLike, tap } from 'rxjs';
 import { disco, DiscoDTO } from '../Interfaces/disco';
-import { discardPeriodicTasks } from '@angular/core/testing';
 import { artista } from '../Interfaces/artista';
 import { cancion, cancionDTO } from '../Interfaces/cancion';
 import { user } from '../../../interfaces/user';

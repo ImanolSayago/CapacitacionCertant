@@ -17,6 +17,12 @@ import { authGuardFn } from './auth/guard/Auth-guard-fn';
 
 export const routes: Routes = [
 
+    
+  {
+    path: '',
+    redirectTo: 'login',
+    pathMatch: 'full'
+  },
   {
     path: "login",
     component: LoginComponent
@@ -29,7 +35,7 @@ export const routes: Routes = [
     children: [
       { path: '', redirectTo: 'discos', pathMatch: 'full' },
       { path: 'discos', component: ListDiscoComponent },
-      { path: 'discos/:id', component: DiscoInformacionComponent },
+      { path: 'discos-admin/:id', component: DiscoInformacionComponent },
       { path: 'agregarDiscos', component: FormDiscoComponent },
       { path: 'canciones', component: ListCancionesComponent },
       { path: 'crearCanciones', component: FormCancionComponent },
@@ -46,7 +52,7 @@ export const routes: Routes = [
       { path: '', redirectTo: 'discos-public', pathMatch: 'full' },
       { path: 'inicio', component: MainPublicComponent },
       { path: 'discos-public', component: ListDiscosComponent },
-      { path: 'discos/:id', component: DiscoInformacionComponent },
+      { path: 'discosAdmin/:id', component: DiscoInformacionComponent },
       { path: 'canciones-public', component: ListCancionesPublicComponent },
       { path: 'artistas-public', component: ListaArtistasComponent },
     ]
