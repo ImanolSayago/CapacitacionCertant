@@ -18,9 +18,14 @@ export class VistaDiscoComponent {
 
   rutas = inject(Router);
 
-  irDisco(id:number)
+  irDiscoAdmin(id:number)
   {
     this.rutas.navigate([`main-admin/discos-admin/${id}`])
+  }
+
+  irDiscoUser(id:number)
+  {
+     this.rutas.navigate([`discos-public/${id}`])
   }
 
   onClickEliminar(idDisco:number)

@@ -52,7 +52,7 @@ export const routes: Routes = [
       { path: '', redirectTo: 'discos-public', pathMatch: 'full' },
       { path: 'inicio', component: MainPublicComponent },
       { path: 'discos-public', component: ListDiscosComponent },
-      { path: 'discosAdmin/:id', component: DiscoInformacionComponent },
+      { path: 'discos-public/:id', component: DiscoInformacionComponent },
       { path: 'canciones-public', component: ListCancionesPublicComponent },
       { path: 'artistas-public', component: ListaArtistasComponent },
     ]

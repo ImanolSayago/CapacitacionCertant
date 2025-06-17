@@ -12,7 +12,14 @@
       </div>
 
       <div class="cont-ir">
-        <a class="btn-ir" (click)="irDisco(disco.id!)">Ver disco</a>
+
+        @if (isAdmin == true) {
+          <a class="btn-ir" (click)="irDiscoAdmin(disco.id!)">Ver disco</a>
+        }
+        @else {
+          <a class="btn-ir" (click)="irDiscoUser(disco.id!)">Ver disco</a>
+        }
+        
 
         @if (isAdmin == true) {
            <a class="btn-delete" (click)="onClickEliminar(disco.id!)" href="">Eliminar disco</a>
