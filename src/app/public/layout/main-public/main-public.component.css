@@ -1,39 +1,51 @@
-nav{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px;
-    background-color: rgb(31, 100, 128);
-    border-bottom: 1px solid black;
+nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: rgb(31, 100, 128);
+  border-bottom: 1px solid black;
+  position: relative;
 }
 
-.logo h2{
-    font-size: 2rem;
-    color: white;
+.logo h2 {
+  font-size: 2rem;
+  color: white;
 }
+
+/* Botón hamburguesa oculto por defecto */
+.hamburguesa {
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+  display: none;
+}
+
+/* Lista de navegación */
+.lista ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.lista ul li {
+  margin: 0 10px;
+}
+
+.lista ul li a {
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: white;
+}
+
 
 main{
  flex-grow: 1;
  margin-bottom: 305px;
-}
-
-.lista ul{
-    list-style: none;
- display: flex;
- flex-direction: row;
- align-items: center;
-}
-
-.lista ul li{
-    margin-right: 10px;
-    margin-left: 10px;
-}
-
-.lista ul li a{
-    font-size: 1.2rem;
-    text-decoration: none;
-    color: white;
 }
 
 footer{
@@ -48,4 +60,35 @@ footer{
 
 footer h3{
     color: white;
+}
+
+/* ---- RESPONSIVE ---- */
+@media (max-width: 768px) {
+  .hamburguesa {
+    display: block;
+  }
+
+  .lista {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    background-color: rgb(31, 100, 128);
+    width: 100%;
+    border-top: 1px solid black;
+  }
+
+  .lista.abierto {
+    display: block;
+  }
+
+  .lista ul {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+  }
+
+  .lista ul li {
+    margin: 10px 0;
+  }
 }

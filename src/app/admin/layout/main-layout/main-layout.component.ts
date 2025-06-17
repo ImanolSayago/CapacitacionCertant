@@ -12,6 +12,7 @@ import { FooterComponent } from "../../../public/core/footer/footer.component";
 export class MainLayoutComponent {
 
   rutas = inject(Router);
+  menuAbierto: boolean = false;
 
   irFormDiscos()
   {

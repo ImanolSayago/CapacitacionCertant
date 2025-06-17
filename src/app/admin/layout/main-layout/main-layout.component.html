@@ -1,26 +1,22 @@
+
 <nav>
     <div class="logo">
-        <h2>Certant music</h2>
+        <h2>Certant Music</h2>
     </div>
 
+ 
+  <div class="hamburguesa" (click)="menuAbierto = !menuAbierto">
+    &#9776;
+  </div>
 
-    <div class="lista">
-
-        <ul>
-            <li>
-                <a (click)="irFormDiscos()">Agregar disco</a>
-            </li>
-            <li>
-                <a (click)="irCanciones()">Canciones</a>
-            </li>
-            <li>
-                <a (click)="irArtistas()">Artistas</a>
-            </li>
-            <li>
-                <a href="">Salir</a>
-            </li>
-        </ul>
-    </div>
+  <div class="lista" [class.abierto]="menuAbierto">
+    <ul>
+      <li><a (click)="irFormDiscos()">Agregar discos</a></li>
+      <li><a (click)="irCanciones()">Canciones</a></li>
+      <li><a (click)="irArtistas()">Artistas</a></li>
+      <li><a href="">Salir</a></li>
+    </ul>
+  </div>
 </nav>
 
 <main>

@@ -11,6 +11,7 @@ import { FooterComponent } from "../../core/footer/footer.component";
 })
 export class MainPublicComponent {
 rutas = inject(Router);
+menuAbierto: boolean = false;
 
 irDiscos()
 {
