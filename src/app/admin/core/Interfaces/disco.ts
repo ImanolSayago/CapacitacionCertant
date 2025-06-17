@@ -6,8 +6,8 @@ export interface disco{
     id?: number;
     titulo:string;
     anoCreacion:string;
-    artista:artista; //un artista o una banda
-    canciones:cancion[] //lista canciones
+    artista:artista; 
+    canciones:cancion[] 
 }
 
 export interface DiscoDTO {

@@ -1,0 +1,23 @@
+.filtro-busqueda {
+  display: flex;
+  justify-content: center;
+  margin: 30px auto;
+  padding: 10px;
+  max-width: 600px;
+}
+
+.filtro-busqueda input {
+  width: 100%;
+  padding: 12px 20px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.filtro-busqueda input:focus {
+  border-color: #3498db;
+  box-shadow: 0 0 10px rgba(52, 152, 219, 0.3);
+}

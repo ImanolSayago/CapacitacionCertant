@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
 })
 export class MuestraCancionComponent {
   @Input() listaCanciones!: cancion[];
-
+ @Input() isAdmin!: boolean;
   @Output() eliminarCancionEvent = new EventEmitter<number>();
 
   rutas = inject(Router);
@@ -21,7 +21,7 @@ export class MuestraCancionComponent {
 
    irCrearCanciones()
   {
-    this.rutas.navigate(["crearCanciones"])
+    this.rutas.navigate(["main-admin/crearCanciones"])
   }
 }
 

@@ -1,0 +1,13 @@
+<section class="filtro-busqueda">
+  <input 
+    type="text" 
+    [(ngModel)]="filtroTexto" 
+    (input)="aplicarFiltros()" 
+    placeholder="Buscar por nombre de disco o artista...">
+</section>
+
+<div class="muestra-discos">
+<app-vista-disco
+[listaDiscos]="listaDiscosFiltrada"
+[isAdmin]="false"> </app-vista-disco>
+</div>

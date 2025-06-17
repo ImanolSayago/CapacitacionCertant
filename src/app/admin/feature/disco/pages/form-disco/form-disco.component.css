@@ -2,20 +2,20 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 80vh; /* Ocupa la mayor parte de la altura de la ventana */
-  background-color: #f0f2f5; /* Un gris claro de fondo */
+  min-height: 80vh; 
+  background-color: #f0f2f5; 
   padding: 20px;
 }
 
-/* Estilo del formulario en sí */
+
 form {
   background-color: #ffffff;
   padding: 40px;
   border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   width: 100%;
-  max-width: 500px; /* Ancho máximo para que no se extienda demasiado */
-  box-sizing: border-box; /* Incluye padding y border en el ancho */
+  max-width: 500px; 
+  box-sizing: border-box; 
 }
 
 h2 {
@@ -26,13 +26,13 @@ h2 {
   font-weight: 600;
 }
 
-/* Estilo para cada grupo de label e input/select */
+
 .form-group {
   margin-bottom: 20px;
 }
 
 .form-group label {
-  display: block; /* Cada label en su propia línea */
+  display: block; 
   margin-bottom: 8px;
   color: #555;
   font-weight: bold;
@@ -47,51 +47,51 @@ h2 {
   border-radius: 6px;
   font-size: 1em;
   color: #333;
-  box-sizing: border-box; /* Asegura que el padding no aumente el ancho total */
-  transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Transición suave */
+  box-sizing: border-box; 
+  transition: border-color 0.3s ease, box-shadow 0.3s ease; 
 }
 
 .form-group input[type="text"]:focus,
 .form-group select:focus {
-  border-color: #007bff; /* Color azul al enfocar */
-  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); /* Sombra de enfoque */
-  outline: none; /* Elimina el contorno por defecto del navegador */
+  border-color: #007bff; 
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  outline: none; 
 }
 
-/* Estilo específico para el select múltiple de canciones */
+
 .form-group select.multi-select {
-  min-height: 120px; /* Altura mínima para que se vean varias opciones */
-  resize: vertical; /* Permite redimensionar verticalmente */
+  min-height: 120px; 
+  resize: vertical; 
 }
 
-/* Estilo para mensajes de error */
+
 .error-message {
-  color: #dc3545; /* Rojo para errores */
+  color: #dc3545; 
   font-size: 0.85em;
   margin-top: 5px;
 }
 
-/* Estilo del botón de submit */
+
 .submit-button {
-  display: block; /* Para que ocupe todo el ancho */
+  display: block;
   width: 100%;
   padding: 15px;
-  background-color: #28a745; /* Verde para la acción principal */
+  background-color: #28a745; 
   color: white;
   border: none;
   border-radius: 6px;
   font-size: 1.1em;
   font-weight: bold;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease; /* Transiciones suaves */
+  transition: background-color 0.3s ease, transform 0.2s ease; 
 }
 
 .submit-button:hover {
-  background-color: #218838; /* Verde más oscuro al pasar el ratón */
-  transform: translateY(-2px); /* Pequeño efecto "pop" */
+  background-color: #218838; 
+  transform: translateY(-2px); 
 }
 
 .submit-button:active {
-  background-color: #1e7e34; /* Aún más oscuro al clickear */
+  background-color: #1e7e34; 
   transform: translateY(0);
 }

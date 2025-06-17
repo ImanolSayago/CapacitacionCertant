@@ -1,0 +1,30 @@
+.footer {
+  background-color: rgb(31, 100, 128);
+  color: #f0f0f0;
+  padding: 30px 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.footer-info {
+  margin-bottom: 10px;
+}
+
+.footer-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.footer-sub {
+  font-size: 1rem;
+  color: #cfcfcf;
+}
+
+.footer-copy {
+  font-size: 0.9rem;
+  color: #aaaaaa;
+}

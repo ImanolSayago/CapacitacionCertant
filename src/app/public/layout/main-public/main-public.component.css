@@ -14,7 +14,8 @@ nav{
 }
 
 main{
-      flex: 1;
+ flex-grow: 1;
+ margin-bottom: 305px;
 }
 
 .lista ul{
@@ -48,4 +49,3 @@ footer{
 footer h3{
     color: white;
 }
-

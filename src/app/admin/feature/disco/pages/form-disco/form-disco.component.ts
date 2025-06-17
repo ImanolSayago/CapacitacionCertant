@@ -89,7 +89,7 @@ export class FormDiscoComponent implements OnInit {
 
   const discoDTO: DiscoDTO = {
     titulo: this.formulario.value.titulo ?? "",
-    anoCreacion: this.formulario.value.anoCreacion!, // asegurate que sea número
+    anoCreacion: this.formulario.value.anoCreacion!,
     artistaId: artistaId,
     cancionesIds: cancionIds
   };

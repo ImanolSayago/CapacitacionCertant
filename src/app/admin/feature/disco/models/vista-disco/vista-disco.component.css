@@ -79,6 +79,19 @@
   text-decoration: none;
 }
 
+.btn-delete {
+  padding: 8px 16px;
+  background-color: #e42a2a;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  text-decoration: none;
+}
+
+
 .btn-ir:hover {
   background-color: #2980b9;
 }

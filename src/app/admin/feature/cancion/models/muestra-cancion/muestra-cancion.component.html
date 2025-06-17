@@ -2,7 +2,10 @@
 
  <div class="txt-song">
   <h2 class="section-title">Nuestras Canciones</h2>
-  <a class="add-song-link" (click)="irCrearCanciones()">Agregar nuevas canciones</a>
+  @if (isAdmin==true) {
+    <a class="add-song-link" (click)="irCrearCanciones()">Agregar nuevas canciones</a>
+  }
+  
 </div>
 
   
@@ -13,11 +16,15 @@
         <li class="song-item">
           <div class="song-info">
             <span class="song-title">{{ item.titulo }}</span>
+            <br>
+              <p> Autor: {{ item.autor.nombre}}</p>
             </div>
-          
+            
           <div class="song-actions">
             <button class="play-button">Reproducir</button>
+          @if (isAdmin == true) {
             <button (click)="onEliminarClick(item.id!)" class="delete-button">Eliminar</button>
+          }
             </div>
         </li>
       }

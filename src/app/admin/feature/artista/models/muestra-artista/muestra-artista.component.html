@@ -2,7 +2,10 @@
 
    <div class="txt-art">
       <h2 class="section-title">Nuestros artistas</h2>
-      <a class="add-art-link" (click)="irCrearArtistas()">Agregar nuevos artistas</a>
+      @if (isAdmin == true) {
+        <a class="add-art-link" (click)="irCrearArtistas()">Agregar nuevos artistas</a>
+      }
+      
   </div>
   
   @if (listaArtistas && listaArtistas.length > 0) {
@@ -17,12 +20,15 @@
 
             <div class="artista-actions">
         
-            <button (click)="onEliminarClick(item.id!)" class="delete-button">Eliminar</button>
+              @if (isAdmin==true) {
+                <button (click)="onEliminarClick(item.id!)" class="delete-button">Eliminar</button>
+              }
+            
             </div>
         </li>
       }
     </ul>
   } @else {
-    <p class="no-artista-message">No hay canciones disponibles en este momento.</p>
+    <p class="no-artista-message">No hay artistas disponibles en este momento.</p>
   }
 </div>

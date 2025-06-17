@@ -7,30 +7,31 @@ import { ListCancionesComponent } from './admin/feature/cancion/pages/list-canci
 import { FormCancionComponent } from './admin/feature/cancion/pages/form-cancion/form-cancion.component';
 import { ListArtistaComponent } from './admin/feature/artista/pages/list-artista/list-artista.component';
 import { FormArtistaComponent } from './admin/feature/artista/pages/form-artista/form-artista.component';
+import { MainPublicComponent } from './public/layout/main-public/main-public.component';
+import { ListDiscosComponent } from './public/feature/disco/pages/list-discos/list-discos.component';
+import { ListCancionesPublicComponent } from './public/feature/cancion/pages/list-canciones-public/list-canciones-public.component';
+import { ListaArtistasComponent } from './public/feature/artista/pages/lista-artistas/lista-artistas.component';
 
 
 export const routes: Routes = [
  {
-        path: '', // Esta es la ruta raíz. Cuando la URL esté vacía, se renderizará MainLayoutComponent.
+
+        //RUTAS ADMINISTRADOR//
+        path: 'main-admin', 
         component: MainLayoutComponent,
-        // Aquí viene la clave: 'children' define las rutas que se cargarán *dentro* del <router-outlet> de MainLayoutComponent.
+      
         children: [
             {
-                path: '', // Ruta vacía dentro del children: esto significa '/'. Podrías poner aquí un componente de inicio.
-                          // Por ejemplo, aquí podrías querer un DashboardComponent para el admin.
-                          // Si no tienes un componente específico para la raíz del layout, puedes omitir esta entrada,
-                          // pero es común tener una página de inicio.
-                          // Si quisieras que el listado de discos fuera la "página principal" del layout:
-                          // path: '', component: ListDiscoComponent
-                redirectTo: 'discos', // Puedes redirigir a 'discos' si quieres que sea la primera página
-                pathMatch: 'full'     // Asegura que la redirección sea solo si la URL es exactamente vacía.
+                path: '', 
+                redirectTo: 'discos', 
+                pathMatch: 'full'     
             },
             {
-                path: 'discos', // Esta ruta ahora será '/discos' (porque está anidada bajo '')
+                path: 'discos', 
                 component: ListDiscoComponent
             },
             {
-                path: 'discos/:id', // Esta ruta ahora será '/discos/:id'
+                path: 'discos/:id', 
                 component: DiscoInformacionComponent
             },
             {
@@ -55,12 +56,22 @@ export const routes: Routes = [
                 path:"crearArtista",
                 component:FormArtistaComponent
             }
-            // Agrega aquí todas las demás rutas que quieras que usen este layout, por ejemplo:
-            // { path: 'artistas', component: ListArtistaComponent },
-            // { path: 'artistas/:id', component: ArtistaInformacionComponent },
-            // { path: 'agregar-disco', component: AddDiscoComponent },
-            // { path: 'agregar-cancion', component: AddCancionComponent },
-            // { path: 'agregar-artista', component: AddArtistaComponent }
         ]
     },
+
+    //RUTAS USUARIO 
+    {
+  path: '',
+  component: MainPublicComponent, 
+  children: [
+    { path: '', redirectTo: 'discos-public', pathMatch: 'full' },
+    { path: 'inicio', component: MainPublicComponent },
+    { path: 'discos-public', component: ListDiscosComponent },
+    { path: 'discos/:id', component: DiscoInformacionComponent },
+    { path: 'canciones-public', component: ListCancionesPublicComponent },
+    { path: 'artistas-public', component: ListaArtistasComponent },
+
+    { path: '**', redirectTo: 'discos-public' }
+  ]
+}
 ];

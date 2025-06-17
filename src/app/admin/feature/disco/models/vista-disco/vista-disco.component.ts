@@ -12,6 +12,7 @@ import { Router } from '@angular/router';
 export class VistaDiscoComponent {
 
   @Input() listaDiscos!: disco[];
+  @Input() isAdmin!: boolean;
 
   @Output() eliminarDiscoEvent= new EventEmitter<number>();
 

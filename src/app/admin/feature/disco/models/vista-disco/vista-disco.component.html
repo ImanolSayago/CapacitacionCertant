@@ -3,7 +3,7 @@
   { 
     <div class="contenedor-disco">
       <div class="cont-img">
-        <img src="URL_DE_TU_IMAGEN_DEL_DISCO" alt="Portada de {{disco.titulo}}">
+        <img src="urlimg" alt="Portada de {{disco.titulo}}">
       </div>
 
       <div class="txt-info">
@@ -13,7 +13,11 @@
 
       <div class="cont-ir">
         <a class="btn-ir" (click)="irDisco(disco.id!)">Ver disco</a>
-        <a class="btn-ir" (click)="onClickEliminar(disco.id!)" href="">Eliminar disco</a>
+
+        @if (isAdmin == true) {
+           <a class="btn-delete" (click)="onClickEliminar(disco.id!)" href="">Eliminar disco</a>
+        }
+       
       </div>
     </div>
   } @empty { <p class="no-discos-message">No hay discos disponibles para mostrar.</p>

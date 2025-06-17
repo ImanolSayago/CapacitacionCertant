@@ -12,6 +12,8 @@ import { Router } from '@angular/router';
 export class MuestraArtistaComponent {
 
   @Input() listaArtistas!:artista[];
+  @Input() isAdmin!:boolean;
+
   @Output() eliminarArtistaEvent = new EventEmitter<number>()
 
   rutas = inject(Router);
@@ -22,6 +24,6 @@ export class MuestraArtistaComponent {
 
   irCrearArtistas()
   {
-    this.rutas.navigate(["crearArtista"])
+    this.rutas.navigate(["main-admin/crearArtista"])
   }
 }
