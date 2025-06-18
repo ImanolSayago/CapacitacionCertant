@@ -3,7 +3,7 @@ Para que esta aplicación funcione correctamente, necesitarás tener su backend 
 
 # 1.Inicia el Backend
 Asegúrate de que el repositorio backendRepoCap (que se encuentra en mis otros repositorios) esté clonado y su servidor esté corriendo. Este frontend se comunicará con él.
-
+Luego en el front-end: ng serve -o
 # 2.Crea un Usuario Administrador
 Aunque la aplicación permite registrar nuevos usuarios, para empezar a gestionar contenido necesitarás un usuario con rol de administrador. Por ahora, esto se realiza directamente a través de Postman (o cualquier cliente HTTP):
 
@@ -20,6 +20,8 @@ JSON=>
   "tipo": "ADMIN"
 }
 Nota: Puedes cambiar user1 y 123456 por el nombre de usuario y contraseña que prefieras.
+
+Crear artista, luego un disco y por ultimo las canciones que entraran en el disco
 
 # 3.No implementado
 Todavia no esta implementado el cargar imagenes en el backend, asi que no mostrara imagen cada disco.
