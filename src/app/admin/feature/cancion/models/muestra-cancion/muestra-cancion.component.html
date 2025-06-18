@@ -21,7 +21,9 @@
             </div>
             
           <div class="song-actions">
-            <button class="play-button">Reproducir</button>
+            <a href="">
+              <img src="/assets/play.png" alt="">
+            </a>
           @if (isAdmin == true) {
             <button (click)="onEliminarClick(item.id!)" class="delete-button">Eliminar</button>
           }

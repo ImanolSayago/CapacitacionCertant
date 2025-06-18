@@ -40,10 +40,14 @@ export const routes: Routes = [
     canActivate: [authGuardFn],
     children: [
       { path: '', redirectTo: 'discos', pathMatch: 'full' },
+
       { path: 'discos', component: ListDiscoComponent },
+
       { path: 'discos-admin/:id', component: DiscoInformacionComponent },
       { path: 'agregarDiscos', component: FormDiscoComponent },
+
       { path: 'canciones', component: ListCancionesComponent },
+      
       { path: 'crearCanciones', component: FormCancionComponent },
       { path: 'listaArtista', component: ListArtistaComponent },
       { path: 'crearArtista', component: FormArtistaComponent },

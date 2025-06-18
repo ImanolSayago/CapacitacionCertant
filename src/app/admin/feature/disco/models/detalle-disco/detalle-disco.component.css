@@ -1,7 +1,7 @@
 
 .txt-carta h1 {
   margin: 0;
-  font-size: 2rem;
+  font-size: 2.2rem;
   color: #333;
 }
 
@@ -26,9 +26,13 @@
 .canciones li {
   margin-bottom: 10px;
   padding: 10px;
-  border-left: 4px solid #007acc;
+  border-left: 5px solid #007acc;
   background-color: #f8f8f8;
   transition: background-color 0.3s;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .canciones li:hover {
@@ -44,3 +48,5 @@
 .canciones a:hover {
   text-decoration: underline;
 }
+
+

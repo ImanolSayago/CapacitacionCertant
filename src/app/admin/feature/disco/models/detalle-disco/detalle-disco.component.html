@@ -9,10 +9,11 @@
 
             @if (disc.canciones && disc.canciones.length > 0) {
             <ul>
-            @for (cancion of disc.canciones; track cancion.id) { <li>
-                <a href="">
-                {{ cancion.titulo }}
-                </a></li>
+            @for (cancion of disc.canciones; track cancion.id) {
+                 <li>
+                    <a > {{ cancion.titulo }} </a>
+                    <a ><img class="img-play" src="/assets/play.png" alt=""></a>
+                </li>
                 }
             </ul>
     } @else {

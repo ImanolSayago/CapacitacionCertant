@@ -50,27 +50,26 @@ export class RegisterComponent{
               }
 
                this.service.addUser(usuario).subscribe(
-      {
-        next:()=>{
-          alert("Usuario creado con exito")
-        },
-        error:(err:Error)=>
-        {
-          console.log(err.message);
+                {
+                 next:()=>{
+                  alert("Usuario creado con exito")
+                },
+                  error:(err:Error)=>
+                  {
+                  console.log(err.message);
+                  }
+                })
+            },
+           error:(err:Error)=>
+          {
+            console.log(err.message);
+          }
         }
-      }
-    )
-        },
-        error:(err:Error)=>
-        {
-          console.log(err.message);
-        }
-      }
-    )
-  }
+     )
+    }
 
-  irLogin()
-  {
+   irLogin()
+    {
     this.rutas.navigate(["login"])
-  }
+  } 
 }
