@@ -25,7 +25,7 @@ export class VistaDiscoComponent {
 
   irDiscoUser(id:number)
   {
-     this.rutas.navigate([`discos-public/${id}`])
+     this.rutas.navigate([`main-admin/discos-public/${id}`])
   }
 
   onClickEliminar(idDisco:number)

@@ -18,8 +18,7 @@ import { EditFormDiscoComponent } from './admin/feature/disco/pages/edit-form-di
 
 
 export const routes: Routes = [
-
-    
+  
   {
     path: '',
     redirectTo: 'login',
@@ -47,7 +46,7 @@ export const routes: Routes = [
       { path: 'agregarDiscos', component: FormDiscoComponent },
 
       { path: 'canciones', component: ListCancionesComponent },
-      
+
       { path: 'crearCanciones', component: FormCancionComponent },
       { path: 'listaArtista', component: ListArtistaComponent },
       { path: 'crearArtista', component: FormArtistaComponent },
