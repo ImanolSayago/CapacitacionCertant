@@ -1,5 +1,5 @@
 
-.songs-list-container {
+.list-container {
   padding: 30px;
   background-color: #f9f9f9;
   border-radius: 8px;
@@ -11,7 +11,7 @@
 }
 
 
-.songs-list-container h2 {
+.list-container h2 {
   text-align: left;
   color: #2c3e50;
   margin-bottom: 0;
@@ -23,14 +23,14 @@
 }
 
 
-.songs-list {
+.cancion-list {
   list-style: none; 
   padding: 0;
   margin: 0;
 }
 
 
-.song-item {
+.cancion-item {
   background-color: #ffffff;
   border: 1px solid #e0e0e0;
   border-radius: 6px;
@@ -43,21 +43,21 @@
 }
 
 
-.song-item:hover {
+.cancion-item:hover {
   transform: translateY(-3px); 
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12); 
   border-color: #3498db; 
 }
 
 
-.song-title {
+.cancion-title {
   font-size: 1.3em;
   font-weight: 600;
   color: #2c3e50;
 }
 
 
-.no-songs-message {
+.no-cancion-message {
   text-align: center;
   font-size: 1.1em;
   color: #666;
@@ -67,7 +67,7 @@
   background-color: #f0f0f0;
 }
 
-.song-item {
+.cancion-item {
   background-color: #ffffff;
   border: 1px solid #e0e0e0;
   border-radius: 6px;
@@ -79,22 +79,25 @@
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.song-item:hover {
+.cancion-item:hover {
   transform: translateY(-3px);
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
   border-color: #3498db;
 }
 
 
-.song-info {
+.cancion-info {
   flex-grow: 1; 
 }
 
 
-.song-actions {
+.cancion-actions {
   flex-shrink: 0; 
   margin-left: 20px; 
   display: flex;
+}
+.cancion-actions a{
+  margin-right: 10px;
 }
 
 
@@ -132,14 +135,14 @@
   background-color: #27ae60; 
   transform: translateY(-1px);
 }
-.txt-song {
+.txt-cancion {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
 }
 
-.add-song-link
+.add-cancion-link
 {
   border: 1px solid gray;
   padding: 5px 10px;
@@ -147,6 +150,6 @@
 transition: transform 0.2s ease;
 }
 
-.add-song-link:hover{
+.add-cancion-link:hover{
   transform: translateY(-5px);
 }
