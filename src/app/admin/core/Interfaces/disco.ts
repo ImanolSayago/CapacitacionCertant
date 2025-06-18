@@ -7,7 +7,8 @@ export interface disco{
     titulo:string;
     anoCreacion:string;
     artista:artista; 
-    canciones:cancion[] 
+    canciones:cancion[];
+    urlImg?:string;
 }
 
 export interface DiscoDTO {

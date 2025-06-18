@@ -18,6 +18,8 @@ export class FormDiscoComponent implements OnInit {
   
   }
 
+  archivoSeleccionado!:File;
+
   fb = inject(FormBuilder);
   service = inject(AdminService);
   listaArtistas:artista[] = []
@@ -36,7 +38,8 @@ export class FormDiscoComponent implements OnInit {
       titulo: ['', Validators.required],
       anoCreacion: ['', Validators.required],
       artista: [0,Validators.required],
-     canciones: this.fb.control<number[]>([], Validators.required)
+     canciones: this.fb.control<number[]>([]),
+    
     }
   )
 
@@ -83,26 +86,45 @@ export class FormDiscoComponent implements OnInit {
   );
 }
 
-  enviarFormulario() {
-  const artistaId = this.formulario.value.artista!;
-  const cancionIds: number[] = this.formulario.value.canciones ?? [];
+ enviarFormulario() {
+  if (this.formulario.invalid) {
+    alert("Complete todos los campos correctamente");
+    return;
+  }
 
-  const discoDTO: DiscoDTO = {
-    titulo: this.formulario.value.titulo ?? "",
+ 
+  const discoObj = {
+    titulo: this.formulario.value.titulo!,
     anoCreacion: this.formulario.value.anoCreacion!,
-    artistaId: artistaId,
-    cancionesIds: cancionIds
+    artistaId: this.formulario.value.artista!,
+    cancionesIds: this.formulario.value.canciones ?? []
   };
 
-  this.service.addDisco(discoDTO).subscribe({
-    next: () => {
-      alert("Disco creado con éxito");
-    },
-    error: (err: Error) => {
-      console.log(err.message);
-      alert("No se pudo crear el disco");
+  const formData = new FormData();
+
+  formData.append('disco', new Blob([JSON.stringify(discoObj)], { type: 'application/json' }));
+
+  if (this.archivoSeleccionado) {
+    formData.append('imagen', this.archivoSeleccionado);
+  } else {
+    alert("Tenés que seleccionar una imagen");
+    return;
+  }
+
+  this.service.addDiscoconIMG(formData).subscribe({
+    next: () => alert("Disco creado con imagen!"),
+    error: (err) => {
+      console.error(err);
+      alert("Error al crear disco con imagen");
     }
   });
+}
+
+onFileSelected(event: Event) {
+  const input = event.target as HTMLInputElement;
+  if (input.files && input.files.length > 0) {
+    this.archivoSeleccionado = input.files[0];
+  }
 }
 
 }

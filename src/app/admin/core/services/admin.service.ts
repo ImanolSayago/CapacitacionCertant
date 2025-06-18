@@ -34,6 +34,12 @@ export class AdminService {
     return this.http.post<disco>(url,disc);
   }
 
+  addDiscoconIMG(disc:FormData):Observable<disco>
+  {
+    const url = `${this.api}/api/disco/crear-con-imagen`
+    return this.http.post<disco>(url,disc);
+  }
+
   deleteDisco(id:number):Observable<void>
   {
     const url = `${this.api}/api/disco/delete/${id}`;

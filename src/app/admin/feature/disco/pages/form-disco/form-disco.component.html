@@ -7,10 +7,15 @@
       <label for="titulo">Título del Disco:</label>
 
       <input type="text" id="titulo" formControlName="titulo" placeholder="Ej: Abismo de pasión">
-      
+
       @if (formulario.get('titulo')?.invalid && (formulario.get('titulo')?.dirty || formulario.get('titulo')?.touched)) {
         <div class="error-message">Título es requerido.</div>
       }
+    </div>
+
+    <div class="form-group">
+  <label for="imagen">Imagen del disco:</label>
+  <input type="file" id="imagen" (change)="onFileSelected($event)" accept="image/*" />
     </div>
 
     <div class="form-group">
