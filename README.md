@@ -21,6 +21,8 @@ JSON=>
 }
 Nota: Puedes cambiar user1 y 123456 por el nombre de usuario y contraseña que prefieras.
 
+Crear artista, luego un disco y por ultimo las canciones que entraran en el disco
+
 # 3.No implementado
 Todavia no esta implementado el cargar imagenes en el backend, asi que no mostrara imagen cada disco.
 
