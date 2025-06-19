@@ -149,6 +149,7 @@ describe("Funcionalidades admin",()=>
               cy.get('.submit-button').click();
         });
 
+
         it("Eliminar artista",()=>
         {
                 cy.contains("li a", "Artistas").click()

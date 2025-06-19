@@ -62,6 +62,29 @@ beforeEach(() => {
         cy.get('#password').should('be.visible'); 
     });
 
+    it("Busqueda de disco especifico",()=>
+    {   
+        const discoCoincidencia= "Cumbia a ritmo";
+         const artistaCoincidencia = 'La T y la M';       
+        const discoNoCoincidente = 'Unknown Album'
+        const textoBusqueda = "Cumbia a rit";
+
+         cy.get('.contenedor-disco').should('have.length.of.at.least', 3);
+
+       cy.get('.filtro-busqueda input[type="text"]').as('buscador'); 
+
+          cy.get('@buscador').type(textoBusqueda);
+
+           cy.contains('.contenedor-disco h3', discoCoincidencia).should('be.visible');
+
+            const textoBusquedaArtista = 'La t y la'; 
+        cy.get('@buscador').clear().type(textoBusquedaArtista); 
+
+        cy.contains('.contenedor-disco p', artistaCoincidencia).should('be.visible');
+        cy.contains('.contenedor-disco h3', discoCoincidencia).should('exist'); // Si Thriller no es de Queen
+        cy.contains('.contenedor-disco h3', discoNoCoincidente).should('not.exist');
+    })
+
     });
 
 })
