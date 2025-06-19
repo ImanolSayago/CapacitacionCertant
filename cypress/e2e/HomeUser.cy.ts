@@ -59,7 +59,7 @@ beforeEach(() => {
         cy.contains('li a', 'Salir').click();
         cy.url().should('include', '/login');
         cy.get('#usuario').should('be.visible');
-        cy.get('#password').should('be.visible');
+        cy.get('#password').should('be.visible'); 
     });
 
     });
