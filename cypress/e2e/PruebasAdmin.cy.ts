@@ -149,6 +149,17 @@ describe("Funcionalidades admin",()=>
               cy.get('.submit-button').click();
         });
 
+        it("Eliminar artista",()=>
+        {
+                cy.contains("li a", "Artistas").click()
+            cy.get('.artista-list .artista-item').should('have.length.at.least', 1);
+
+        cy.get('.artista-list .artista-item')
+        .last() 
+        .find('.delete-button')
+        .click();
+        });
+
         it("Logout",()=>
         {
             cy.contains("li a","Salir").click();
